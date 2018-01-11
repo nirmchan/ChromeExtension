@@ -1,6 +1,6 @@
 var values = [];
 var indextracker = 1;
-var record=true;//TODO: Need to fix this flag from popup js
+var record=false;//TODOfixed: Need to fix this flag from popup js
 console.log("I am background js");
 //TODOdone: Background js should have a tag controlled from UI whether to record or not and decide if to send values to popup of not
 $(document).ready(function() {

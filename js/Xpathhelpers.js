@@ -95,5 +95,8 @@ module.exports = {
         } else {
             return "";
         }
+    },
+    getElementvalue:function(node){
+      return $(node).val();
     }
 }

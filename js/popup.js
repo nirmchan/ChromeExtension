@@ -25,25 +25,26 @@ simpleApp.controller('mainctrl', function($scope) {
         });
     }
 });
-//TODO: need to fix this section for button start and stop
-// $(document).ready(function() {
-//   //event handler for start and stop
-//   $('img.start','img.pause').click(function(){
-//       //TODOdone:send message to background to start
-//       chrome.runtime.sendMessage({
-//           from: 'popup',
-//           subject: 'enable/disable'
-//       }, function(response) {
-//           console.log(response.statusofrecorder);
-//       });
-//
-//       if (!$(this).hasClass('start')) {
-//           $(this).attr('src', '/img/starticon.png');
-//           $(this).addClass('start');
-//
-//       } else  {
-//           $(this).attr('src', '/img/pauseicon.png');
-//           $(this).removeClass('start');
-//             $(this).addClass('pause');
-//       }
-//   });
+//fixedTODO: need to fix this section for button start and stop
+$(document).ready(function() {
+  //event handler for start and stop
+  $('img.start').click(function(){
+      //TODOdone:send message to background to start
+      chrome.runtime.sendMessage({
+          from: 'popup',
+          subject: 'enable/disable'
+      }, function(response) {
+          console.log(response.statusofrecorder);
+      });
+
+      if (!$(this).hasClass('start')) {
+          $(this).attr('src', '/img/starticon.png');
+          $(this).addClass('start');
+
+      } else  {
+          $(this).attr('src', '/img/pauseicon.png');
+          $(this).removeClass('start');
+            $(this).addClass('pause');
+      }
+  });
+});
